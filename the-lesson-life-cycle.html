@@ -311,11 +311,14 @@ support.</p>
 <h2><span class="header-section-number">7.3</span> Where to start</h2>
 <p>Before you start developing a new lesson, check
 to see if there are already people working on creating
-a lesson for this topic. The <a href="https://github.com/carpentries-incubator/proposals/blob/master/README.md">Carpentries Incubator</a> is where our community comes
-together to talk about lesson ideas and find
-collaborators. You can check existing <a href="https://github.com/carpentries-incubator/proposals/issues">issues</a>
+a lesson for this topic.
+The <a href="https://github.com/carpentries-incubator/">Carpentries Incubator</a> is where our community
+develops new curriculum together.
+New lessons are suggested for development and added to Incubator via the <a href="https://github.com/carpentries-incubator/proposals/blob/master/README.md">Proposals</a> repository,
+so this is the best place to talk about lesson ideas and find collaborators.
+You can check existing <a href="https://github.com/carpentries-incubator/proposals/issues">issues</a> on that repository
 or start a new issue if you don’t see any discussions
-on your topic. The <a href="https://github.com/carpentries-incubator/proposals/blob/master/ISSUE_TEMPLATE.md">issue template</a> has
+on your lesson topic. The <a href="https://github.com/carpentries-incubator/proposals/blob/master/ISSUE_TEMPLATE.md">issue template</a> has
 a short set of questions for you to answer. Your answers
 to these questions will help us to determine an
 appropriate next step for your lesson materials or
@@ -380,6 +383,88 @@ and provide pedagogical guidance. For lessons on the
 Official Track, authors will meet regularly with
 a member of the Curriculum Team to work through the
 lesson drafting process.</p>
+<p>Lessons under community development in the Carpentries Incubator are
+<a href="https://carpentries.org/community-lessons/">listed on The Carpentries website</a>,
+based on topics added to the lesson repository.
+Some topics are essential:
+labeling the repository as a lesson,
+noting the language(s) the material is available in,
+and describing the lesson’s location and state of development.
+Others are more flexible,
+but should describe the domain of the lesson
+(e.g. microbial ecology, digital humanities),
+the main skills taught in the lesson
+(e.g. data organization, image segmentation),
+and the main software/tools used in the lesson
+(e.g. Python, Singularity).
+The Curriculum Team will support you in setting topics for your lesson.
+See the table below for guidance about the types and number of topics each
+lesson repository should have.</p>
+<table>
+<colgroup>
+<col width="29%" />
+<col width="29%" />
+<col width="23%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>category</th>
+<th>example</th>
+<th>number</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>lesson</td>
+<td><code>lesson</code></td>
+<td>1</td>
+<td>the type of repo. this needs to be <code>lesson</code> for the lesson to be listed on the Community Developed Lessons page</td>
+</tr>
+<tr class="even">
+<td>location</td>
+<td><code>carpentries-incubator</code></td>
+<td>1</td>
+<td><code>carpentries-incubator</code> or <code>carpentrieslab</code></td>
+</tr>
+<tr class="odd">
+<td>language</td>
+<td><code>español</code></td>
+<td>&gt;0</td>
+<td>the language(s) the lesson is available in. should be present for every lesson repo</td>
+</tr>
+<tr class="even">
+<td>stage</td>
+<td><code>alpha</code></td>
+<td>1</td>
+<td>the current development stage for the lesson. See <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html">chapter 7 of the curriculum development handbook</a> for more info.</td>
+</tr>
+<tr class="odd">
+<td>domain</td>
+<td><code>microbial-ecology</code></td>
+<td>1-2</td>
+<td>the high-level domain(s) of the lesson, for a general categorisation</td>
+</tr>
+<tr class="even">
+<td>tools</td>
+<td><code>python</code></td>
+<td>1-3</td>
+<td>the tool(s) taught in the lesson</td>
+</tr>
+<tr class="odd">
+<td>skills</td>
+<td><code>taxonomic-classification</code></td>
+<td>1-3</td>
+<td>the main skill(s) taught in the lesson</td>
+</tr>
+</tbody>
+</table>
+<p>To help ensure consistency across our lesson repositories,
+please refer to <a href="https://docs.google.com/spreadsheets/d/1KkmBtCu4PaNb5nzJAD82UHcfHQlaPY84qPVxw8WO8es/edit?usp=sharing">this listing</a> of topics currently
+in use in The Carpentries Incubator,
+and re-use these values where appropriate,
+creating new topics where no pre-existing label exists for your lesson.</p>
 </div>
 <div id="field-testing-alpha-stage" class="section level2">
 <h2><span class="header-section-number">7.5</span> Field testing: alpha stage</h2>
@@ -390,13 +475,13 @@ feedback from learners, instructors, and workshop
 helpers who can compare their expectations to
 reality. The initial feedback gathered during these first
 workshops is really important.</p>
-<p>During alpha pilot workshops, instructors and helpers should take detailed notes, including:<br />
-- amount of time used to teach each section<br />
-- amount of time used for each exercise<br />
-- technical issues that arose during installation<br />
-- bugs or parts of the lesson code that didn’t work as expected<br />
-- incorrect or missing exercise solutions<br />
-- questions learners asked (and their answers)<br />
+<p>During alpha pilot workshops, instructors and helpers should take detailed notes, including:
+- amount of time used to teach each section
+- amount of time used for each exercise
+- technical issues that arose during installation
+- bugs or parts of the lesson code that didn’t work as expected
+- incorrect or missing exercise solutions
+- questions learners asked (and their answers)
 - parts of the lesson that were confusing for learners</p>
 <p>These notes can be collected in an Etherpad, Google Doc, or other collaborative document that is shared
 with co-instructors and workshop helpers. This document should not be shared with workshop learners,
@@ -477,13 +562,10 @@ discussion. Each lesson Maintainer team will develop their own strategies for ma
 but we recommend the following as a starting point.</p>
 <ul>
 <li>Maintainers for a lesson should set a regular meeting to discuss any unresolved issues that have arisen and to decide on the division of responsibilities until
-their next meeting.<br />
-</li>
+their next meeting.</li>
 <li>One Maintainer commits to monitor the repo daily and respond to new issues and PRs to acknowledge them,
-thank the contributor, and apply appropriate <a href="https://docs.carpentries.org/topic_folders/maintainers/github_labels.html">issue tags</a>.<br />
-</li>
-<li>Once a week, one Maintainer looks at the list of active issues and PRs and assigns each to one team member, based on the time commitment and availability discussed at that month’s meeting.<br />
-</li>
+thank the contributor, and apply appropriate <a href="https://docs.carpentries.org/topic_folders/maintainers/github_labels.html">issue tags</a>.</li>
+<li>Once a week, one Maintainer looks at the list of active issues and PRs and assigns each to one team member, based on the time commitment and availability discussed at that month’s meeting.</li>
 <li>Individual team members work on resolving issues and PRs, as assigned, asking
 their co-Maintainers for review when needed.</li>
 </ul>
